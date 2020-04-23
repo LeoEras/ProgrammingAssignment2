@@ -30,7 +30,7 @@ cacheSolve <- function(x, ...) {
         }
         message("Inverse matrix not found on cache... Getting the inversed matrix now for you!")
         data <- x$get()
-        inverse <- solve(data)
+        inverse <- solve(data, ...)
         x$setinverse(inverse)
         message("All done, and cached!")
         inverse
